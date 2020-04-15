@@ -9,12 +9,12 @@ class util {
         if ( this.eNumero(ano) && this.eNumero(mes) && this.eNumero(dia) ){
         
             if ( (mes<=0) || (mes>12) ){
-                console.log('Número mês menor que 1 ou maior que 12 inválido!');
+                //console.log('Número mês menor que 1 ou maior que 12 inválido!');
                 return false;
             }
 
             if ( (dia>31) || (dia <=0) ){
-                console.log('Número dia maior que 31 ou menor que 1 inválido!');
+                //console.log('Número dia maior que 31 ou menor que 1 inválido!');
                 return false;
             }
             
@@ -47,14 +47,14 @@ class util {
     } // fim validaData
 
     static eNumero(valor){
-        return typeof valor === "number"
+        return typeof valor === "number";
     }   
 
 } //fim classe util
 
 //var objUtil = new util;
-if (util.validaData('31/03/2002') ){
-    console.log('VALIDADO');
+if (util.validaData('32/02/2004') ){
+    console.log('Validado!');
     document.write('VALIDADO');
 }
 else{
