@@ -16,17 +16,16 @@ class util {
             return false;
         }
 
-        
-        if ( this.eNumero(ano) && this.eNumero(mes) && this.eNumero(dia) ){
+        if ( this.eNumeroValido(ano) && this.eNumeroValido(mes) && this.eNumeroValido(dia) ){
 
             if (ano>0){
                 if ( (mes<=0) || (mes>12) ){
-                    //console.log('Número mês menor que 1 ou maior que 12 inválido!');
+                    console.log('Número mês menor que 1 ou maior que 12 inválido!');
                     return false;
                 }
 
                 if ( (dia>31) || (dia <=0) ){
-                    //console.log('Número dia maior que 31 ou menor que 1 inválido!');
+                    console.log('Número dia maior que 31 ou menor que 1 inválido!');
                     return false;
                 }
                 
@@ -67,14 +66,16 @@ class util {
 
     } // fim validaData
 
-    static eNumero(valor){
+    static eNumeroValido(valor){
         return !isNaN(valor) && isFinite(valor);
         //return typeof valor === "number";
-    }   
-    static eNumeroFloat(valor){
+    } 
+
+    static eNumeroFloatValido(valor){
         return !isNaN(parseFloat(valor)) && isFinite(n);
         //return typeof valor === "number";
-    } 
+    }
+
 } //fim classe util
 
 //var objUtil = new util;
